@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertJS Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+   
+    <button id="showSuccess">Show Success</button>
+    <button id="showWarning">Show Warning</button>
+    <button id="showError">Show Error</button>
+
+  <script src="alert.js"></script>
+
+    <script>
+        window.addEventListener('load', function() {
+            Alertjs.create({
+                title: 'Welcome!',
+                buttonText: 'Close',
+                type: 'success',
+                width: '100px',
+                height: 'auto',
+                textWidth: '100%',
+                textHeight: 'auto',
+                buttonWidth: '100px',
+                buttonHeight: '40px'
+            });
+        });
+
+        document.getElementById('showSuccess').addEventListener('click', function() {
+            Alertjs.create({
+                title: 'Success!',
+                buttonText: 'Great!',
+                type: 'success',
+                width: '200px',
+                height: 'auto',
+                textWidth: '100%',
+                textHeight: 'auto',
+                buttonWidth: '120px',
+                buttonHeight: '50px'
+            });
+        });
+
+        document.getElementById('showWarning').addEventListener('click', function() {
+            Alertjs.create({
+                title: 'Warning!',
+                buttonText: 'Got it!',
+                type: 'warning',
+                width: '200px',
+                height: 'auto',
+                textWidth: '100%',
+                textHeight: 'auto',
+                buttonWidth: '120px',
+                buttonHeight: '50px'
+            });
+        });
+
+        document.getElementById('showError').addEventListener('click', function() {
+            Alertjs.create({
+                title: 'Error!',
+                buttonText: 'Clos',
+                type: 'error',
+                width: '200px',
+                height: 'auto',
+                textWidth: '100%',
+                textHeight: 'auto',
+                buttonWidth: '120px',
+                buttonHeight: '50px'
+            });
+        });
+    </script>
+</body>
+</html>
